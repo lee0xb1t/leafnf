@@ -25,9 +25,9 @@
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <Configuration>Debug</Configuration>
     <Platform Condition="'$(Platform)' == ''">x64</Platform>
-    <RootNamespace>leafnet</RootNamespace>
+    <RootNamespace>leaf_net</RootNamespace>
     <WindowsTargetPlatformVersion>$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
-    <ProjectName>leafnet</ProjectName>
+    <ProjectName>leaf_net</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -119,7 +119,7 @@
     </DriverSign>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Inf Include="leafnet.inf" />
+    <Inf Include="leaf_net.inf" />
   </ItemGroup>
   <ItemGroup>
     <FilesToPackage Include="$(TargetPath)" />
@@ -128,12 +128,18 @@
     <ClCompile Include="intercept.c" />
     <ClCompile Include="leafnet.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="redirectctx.c" />
+    <ClCompile Include="tcp\redirect.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="driver.h" />
     <ClInclude Include="intercept.h" />
     <ClInclude Include="leafnet.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="tcp\redirect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="redirectctx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

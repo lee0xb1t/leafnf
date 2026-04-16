@@ -17,9 +17,15 @@
       <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
       <Extensions>inf;inv;inx;mof;mc;</Extensions>
     </Filter>
+    <Filter Include="Header Files\tcp">
+      <UniqueIdentifier>{f92c446a-d826-43fd-af4c-7cfbfaba3db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tcp">
+      <UniqueIdentifier>{9ab3720d-506e-46ba-a4ba-25a9fdb2b46a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Inf Include="leafnet.inf">
+    <Inf Include="leaf_net.inf">
       <Filter>Driver Files</Filter>
     </Inf>
   </ItemGroup>
@@ -33,19 +39,33 @@
     <ClCompile Include="leafnet.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tcp\redirect.c">
+      <Filter>Source Files\tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="redirectctx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="driver.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="intercept.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="leafnet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tcp\redirect.h">
+      <Filter>Header Files\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intercept.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="redirectctx.h">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
